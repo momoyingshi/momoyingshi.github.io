@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="x"></div>
+<script>
+//    var xuhao = getQueryString('user');
+    var s1 = getQueryString('s1');
+    var s2 = getQueryString('s2');
+    var s3 = getQueryString('s3');
+    var s4 = getQueryString('s4');
+    var s5 = getQueryString('s5');
+    var xuhao = [parseInt(s1),parseInt(s2),parseInt(s3),parseInt(s4),parseInt(s5)]
+    var  a = '';
+    var user=['osT3E1C7Wbf2OAA_YyVMMbYzCyFY','osT3E1JEB-RWeBmcUkhRxVow1dNE','osT3E1DOSiFY9Lphx2G8Rk91UTz4','osT3E1EYLJfkBRRL8B3emhdWQMTE','osT3E1B7nDWnBWP4ghIz-n20uSyM'];
+    var user2=['shadow','拳拳','南坞','01'];
+//    var j=parseInt(xuhao)-1;
+    var k=0;
+    for(var j=0;j<5;j++){
+        k=0;
+        for(var i=xuhao[j] ; k<30;i++){
+            k++;
+            a+='<a href="http://www.baojjch.com/zhrd/count.php?id='+i+'&openid='+user[j]+'" style="padding-right: 30px;line-height: 40px">用户'+(j+1)+'('+i+')</a>'
+        }
+    }
 
+    var x = document.getElementById('x');
+    x.innerHTML = a;
+
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+
+</script>
+</body>
+</html>
