@@ -7,17 +7,28 @@
 <body>
 <div id="x"></div>
 <script>
+    var xuhao = getQueryString('user');
+    var start = getQueryString('start');
+    var startnum  = parseInt(start)
     var  a = '';
     var user=['osT3E1C7Wbf2OAA_YyVMMbYzCyFY','osT3E1JEB-RWeBmcUkhRxVow1dNE','osT3E1DOSiFY9Lphx2G8Rk91UTz4','osT3E1EYLJfkBRRL8B3emhdWQMTE','osT3E1B7nDWnBWP4ghIz-n20uSyM'];
     var user2=['shadow','拳拳','南坞','01'];
-    var j=2;
+    var j=parseInt(xuhao)-1;
     var k=0;
-    for(var i=9363 ; k<80;i++){
+    for(var i=startnum ; k<100;i++){
         k++;
-        a+='<a href="http://www.baojjch.com/zhrd/count.php?id='+i+'&openid='+user[j]+'" style="padding-right: 30px;line-height: 40px">('+i+')</a>'
+        a+='<a href="http://www.baojjch.com/zhrd/count.php?id='+i+'&openid='+user[j]+'" style="padding-right: 30px;line-height: 40px">用户'+user2[j]+'('+i+')</a>'
     }
     var x = document.getElementById('x');
     x.innerHTML = a;
+
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+
 </script>
 </body>
 </html>
