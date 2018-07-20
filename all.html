@@ -21,7 +21,8 @@
     var k=0;
     for(var j=0;j<5;j++){
         k=0;
-        for(var i=xuhao[j] ; k<30;i++){
+        if(!xuhao[j]||xuhao[j]==0) break;
+        for(var i=xuhao[j] ; k<25;i++){
             k++;
             a+='<a href="http://www.baojjch.com/zhrd/count.php?id='+i+'&openid='+user[j]+'" style="padding-right: 30px;line-height: 40px">用户'+(j+1)+'('+i+')</a>'
         }
