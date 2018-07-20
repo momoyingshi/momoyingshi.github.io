@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="x"></div>
+<script>
+    //    var xuhao = getQueryString('user');
+    var s1 = getQueryString('s1');
+    var s2 = getQueryString('s2');
+    var s3 = getQueryString('s3');
+    var s4 = getQueryString('s4');
+    var s5 = getQueryString('s5');
+    var L = getQueryString('L')?getQueryString('L'):0;
+    var L1 = getQueryString('L1')?getQueryString('L1'):'0';
+    var L2 = getQueryString('L2')?getQueryString('L2'):'0';
+    var L3 = getQueryString('L3')?getQueryString('L3'):'0';
+    var L4 = getQueryString('L4')?getQueryString('L4'):'0';
+    var L5 = getQueryString('L5')?getQueryString('L5'):'0';
+
+    var xuhao = [parseInt(s1),parseInt(s2),parseInt(s3),parseInt(s4),parseInt(s5)];
+    var len = [parseInt(L1),parseInt(L2),parseInt(L3),parseInt(L4),parseInt(L5)];
+    var  a = '';
+    var user=['osT3E1C7Wbf2OAA_YyVMMbYzCyFY','osT3E1JEB-RWeBmcUkhRxVow1dNE','osT3E1DOSiFY9Lphx2G8Rk91UTz4','osT3E1EYLJfkBRRL8B3emhdWQMTE','osT3E1B7nDWnBWP4ghIz-n20uSyM'];
+    var user2=['shadow','拳拳','南坞','01'];
+    //    var j=parseInt(xuhao)-1;
+    var k=0;
+    for(var j=0;j<5;j++){
+        k=0;
+        if(!xuhao[j]||xuhao[j]==0) continue;
+        var length_res =25;
+        if(L>0){
+            length_res=L;
+        }
+        if(len[j]>0){
+            length_res = len[j]
+        }
+        for(var i=xuhao[j] ; k<length_res;i++){
+            k++;
+            a+='<a href="http://www.baojjch.com/zhrd/count.php?id='+i+'&openid='+user[j]+'" style="padding-right: 30px;line-height: 40px">用户'+(j+1)+'('+i+')</a>'
+        }
+    }
+    var x = document.getElementById('x');
+    x.innerHTML = a;
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+</script>
+</body>
+</html>
